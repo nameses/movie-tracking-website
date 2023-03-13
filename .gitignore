@@ -1,6 +1,5 @@
-# Default ignored files
 /shelf/
 /workspace.xml
 .idea
-style.scss
-style.css.map
+*.scss
+*.map
