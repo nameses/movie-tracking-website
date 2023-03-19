@@ -1,5 +1,5 @@
 /shelf/
 /workspace.xml
 .idea
-*.scss
-*.map
+assets/css/*.map
+assets/css/*.scss
