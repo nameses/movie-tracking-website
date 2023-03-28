@@ -435,7 +435,7 @@ hr {
   }
 }
 @media only screen and (min-width: 450px) and (max-width: 576px) {
-  .similar-full .similar .similar-containers .similar-component #poster-last, .similar-full .similar .similar-containers .similar-component #poster-last-1 {
+  .similar-full .similar .similar-containers .similar-component .poster-last {
     display: none;
   }
 }

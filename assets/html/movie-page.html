@@ -174,10 +174,10 @@
                 <div class="poster">
                     <img src="../img/everything-everywhere.jpg">
                 </div>
-                <div class="poster" id="poster-last-1">
+                <div class="poster poster-last">
                     <img src="../img/the-shining.jpg">
                 </div>
-                <div class="poster" id="poster-last">
+                <div class="poster poster-last">
                     <img src="../img/joker.jpg">
                 </div>
             </div>
@@ -217,25 +217,7 @@
     </div>
 </div>
 
-<script>
-    $(".slider").slick({
-        attrow: true,
-        dots: false,
-        speed: 500,
-        infinite: true,
-        centerMode: true,
-        // variableWidth: true,
-        draggable: false,
-        slidesToShow: 1
-    });
-    $(".slider")
-        .on("beforeChange", function (event, slick, currentSlide, nextSlide) {
-            $(".slick-list").addClass("do-tans");
-        })
-        .on("afterChange", function () {
-            $(".slick-list").removeClass("do-tans");
-        })
-</script>
+<script src="../js/single-img-slider.js"></script>
 <script crossorigin="anonymous" src="https://kit.fontawesome.com/78efb955e0.js"></script>
 </body>
 </html>
