@@ -139,12 +139,13 @@ hr {
   color: #999999;
   font-family: "Merriweather", serif;
   font-size: 20px;
+  white-space: nowrap;
 }
 .main .search-bar .find-by-full .filters {
   display: flex;
   gap: 30px;
   width: 100%;
-  justify-content: space-between;
+  justify-content: space-around;
   background-color: #1A1A1A;
   border-radius: 20px;
   padding: 15px;
@@ -162,15 +163,43 @@ hr {
 .main .search-bar .find-by-full .filters .filter i {
   color: #999999;
 }
-.main .search-bar .search-movie {
+.main .search-bar .find-by-full .filters-second-row {
+  display: none;
+  gap: 30px;
+  width: 100%;
+  justify-content: space-evenly;
+  background-color: #1A1A1A;
+  border-radius: 20px;
+  padding: 15px;
+}
+.main .search-bar .find-by-full .filters-second-row .filter {
   display: flex;
-  width: 35%;
+  justify-content: space-between;
+  gap: 5px;
   align-items: center;
 }
-.main .search-bar .search-movie h4 {
+.main .search-bar .find-by-full .filters-second-row .filter h3 {
   font-size: 20px;
   color: #999999;
-  margin-right: 20px;
+}
+.main .search-bar .find-by-full .filters-second-row .filter i {
+  color: #999999;
+}
+.main .search-bar .search-movie {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  align-items: center;
+}
+.main .search-bar .search-movie .title {
+  display: none;
+}
+.main .search-bar .search-movie .title h3 {
+  font-family: "Merriweather", serif;
+  margin-right: 10px;
+  font-size: 20px;
+  color: #999999;
+  white-space: nowrap;
 }
 .main .search-bar .search-movie .search-form {
   display: flex;
@@ -193,7 +222,7 @@ hr {
   border: none;
   background-color: transparent;
   cursor: pointer;
-  color: #fff;
+  color: #999999;
   padding-right: 10px;
 }
 .main .films-bar-full {
@@ -293,18 +322,18 @@ hr {
     display: none;
   }
 }
-@media only screen and (min-width: 768px) and (max-width: 992px) {
-  .main .topbar .menu {
-    display: none;
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .main .search-bar .find-by-full .title h3 {
+    font-size: 16px;
   }
-  .main .topbar .right-btns .profile {
-    margin-right: 20px;
+  .main .search-bar .find-by-full .filters {
+    gap: 20px;
   }
-  .main .topbar .right-btns .right-menu {
-    display: contents;
+  .main .search-bar .find-by-full .filters .filter h3 {
+    font-size: 16px;
   }
-  .main .topbar .right-btns .right-menu i {
-    color: #ffffff;
+  .main .search-bar .find-by-full .filters .filter i {
+    font-size: 12px;
   }
 }
 @media only screen and (max-width: 992px) {
@@ -320,6 +349,8 @@ hr {
   .main .topbar .right-btns .right-menu i {
     color: #ffffff;
   }
+}
+@media only screen and (min-width: 768px) and (max-width: 992px) {
   .main .films-bar-full {
     margin-top: 100px;
   }
@@ -330,6 +361,58 @@ hr {
     flex-basis: auto;
     max-width: 22%;
     max-height: 22%;
+  }
+  .main .search-bar {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+  }
+  .main .search-bar .find-by-full .title {
+    display: flex;
+  }
+  .main .search-bar .find-by-full .filters .filter h3 {
+    font-size: 16px;
+  }
+  .main .search-bar .find-by-full .filters .filter i {
+    font-size: 12px;
+  }
+  .main .search-bar .search-movie {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .main .search-bar .search-movie .title {
+    display: flex;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 768px) {
+  .main .search-bar {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+  }
+  .main .search-bar .find-by-full .title {
+    display: none;
+  }
+  .main .search-bar .find-by-full .filters {
+    gap: 10px;
+  }
+  .main .search-bar .find-by-full .filters .filter {
+    gap: 2px;
+  }
+  .main .search-bar .find-by-full .filters .filter h3 {
+    font-size: 16px;
+  }
+  .main .search-bar .find-by-full .filters .filter i {
+    font-size: 12px;
+  }
+  .main .search-bar .search-movie {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .main .search-bar .search-movie .title {
+    display: flex;
   }
 }
 @media only screen and (max-width: 576px) {
@@ -349,6 +432,47 @@ hr {
     max-width: 30%;
     max-height: 30%;
   }
+  .main .search-bar {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+  }
+  .main .search-bar .find-by-full {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+  }
+  .main .search-bar .find-by-full .title {
+    display: none;
+  }
+  .main .search-bar .find-by-full .filters {
+    gap: 60px;
+  }
+  .main .search-bar .find-by-full .filters .filter-last {
+    display: none;
+  }
+  .main .search-bar .find-by-full .filters .filter {
+    gap: 5px;
+  }
+  .main .search-bar .find-by-full .filters .filter h3 {
+    font-size: 20px;
+  }
+  .main .search-bar .find-by-full .filters .filter i {
+    font-size: 16px;
+  }
+  .main .search-bar .find-by-full .filters-second-row {
+    display: flex;
+    margin-top: 10px;
+  }
+  .main .search-bar .search-movie {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .main .search-bar .search-movie .title {
+    display: flex;
+    font-size: 16px;
+  }
 }
 @media only screen and (min-width: 450px) and (max-width: 576px) {
   .main .films-bar-full .films-bar .films-bar-containers .films-bar-component .poster-last {
@@ -359,6 +483,27 @@ hr {
   .main .films-bar-full .films-bar .films-bar-containers .films-bar-component .poster {
     max-width: 46%;
     max-height: 46%;
+  }
+  .main .search-bar .find-by-full .filters {
+    gap: 30px;
+  }
+  .main .search-bar .find-by-full .filters .filter h3 {
+    font-size: 16px;
+  }
+  .main .search-bar .find-by-full .filters .filter i {
+    font-size: 12px;
+  }
+  .main .search-bar .find-by-full .filters-second-row {
+    gap: 20px;
+  }
+  .main .search-bar .find-by-full .filters-second-row .filter h3 {
+    font-size: 16px;
+  }
+  .main .search-bar .find-by-full .filters-second-row .filter i {
+    font-size: 12px;
+  }
+  .main .search-bar .search-movie .title {
+    font-size: 12px;
   }
 }
 h3 {
