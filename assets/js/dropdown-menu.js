@@ -1,7 +1,7 @@
 function openMenu() {
-    // document.getElementById("dropdownMenu").classList.toggle("show");
     var menu = document.getElementById("dropdownMenu");
-    if (menu.style.display === 'none') {
+    var menuStyle = window.getComputedStyle(menu);
+    if (menuStyle.display === 'none') {
         menu.style.display = 'block';
     } else {
         menu.style.display = 'none';
