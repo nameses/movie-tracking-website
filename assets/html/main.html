@@ -9,6 +9,7 @@
           integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" rel="stylesheet">
     <!-- styles -->
     <link href="../css/main.css" rel="stylesheet">
+    <link href="../css/common/topbar-styles.css" rel="stylesheet">
 
 </head>
 <body>
@@ -16,7 +17,7 @@
     <header class="topbar container-fluid ">
         <div class="left-btns">
             <span class="logo-text">
-                <a href="../../index.html">
+                <a href="main.html">
                     <h1>tracker</h1>
                 </a>
             </span>
@@ -28,19 +29,30 @@
             </fieldset>
         </div>
         <div class="menu">
-            <a><h3>ДОСЛІДЖУЙ</h3></a>
-            <a><h3>ФІЛЬМИ</h3></a>
-            <a><h3>СТАТИСТИКА</h3></a>
+            <a href="movie-page.html"><h3>ДОСЛІДЖУЙ</h3></a>
+            <a href="movies.html"><h3>ФІЛЬМИ</h3></a>
+            <a href="main.html"><h3>СТАТИСТИКА</h3></a>
         </div>
-        <div class="right-btns">
-            <div class="profile">
-                <img src="../img/profile-blank.jpg">
-                <span>
+        <div class="right-menu">
+            <div class="right-btns" onclick="openMenu()">
+                <div class="profile">
+                    <img src="../img/profile-blank.jpg">
+                    <span>
                     <h3>ПРОФІЛЬ</h3>
                 </span>
+                </div>
+                <div class="right-icon">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
             </div>
-            <div class="right-menu">
-                <i class="fa-solid fa-bars"></i>
+            <div class="dropdown-menu" id="dropdownMenu">
+                <a href="main.html">Головна</a>
+                <a href="">Профіль</a>
+                <a href="watched-movies.html">Переглянуті</a>
+                <a href="watched-movies.html">До перегляду</a>
+                <a href="watched-movies.html">Улюблені</a>
+                <a href="">Щоденник</a>
+                <a href="../../index.html">Вийти</a>
             </div>
         </div>
     </header>
@@ -87,8 +99,7 @@
         </div>
     </div>
 </div>
-
-
+<script src="../js/dropdown-menu.js"></script>
 <script crossorigin="anonymous" src="https://kit.fontawesome.com/78efb955e0.js"></script>
 </body>
 </html>

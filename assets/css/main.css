@@ -34,94 +34,6 @@ hr {
   background-size: cover;
   background-repeat: no-repeat;
 }
-.main .topbar {
-  height: 80px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-}
-.main .topbar .left-btns {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: center;
-}
-.main .topbar .left-btns .search-form {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  background-color: #1a1a1a;
-  border-radius: 20px;
-  padding: 5px;
-}
-.main .topbar .left-btns .search-form input[type=text] {
-  width: 100%;
-  border: none;
-  background-color: transparent;
-  color: #ffffff;
-  outline: none;
-  box-sizing: border-box;
-  padding: 5px;
-}
-.main .topbar .left-btns .search-form button[type=submit] {
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-  color: #fff;
-  padding-right: 10px;
-}
-.main .topbar .left-btns .logo-text {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 10px;
-  margin-right: 40px;
-}
-.main .topbar .left-btns .logo-text h1 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 200;
-}
-.main .topbar .menu {
-  width: 50%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 10%;
-  margin: 0 50px 0 50px;
-}
-.main .topbar .menu a h3 {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
-  font-size: 20px;
-}
-.main .topbar .right-btns {
-  display: flex;
-  align-items: center;
-  margin-right: 10px;
-}
-.main .topbar .right-btns .profile {
-  display: flex;
-  align-items: center;
-}
-.main .topbar .right-btns .profile img {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  margin-right: 10px;
-}
-.main .topbar .right-btns .profile span h3 {
-  font-size: 20px;
-}
-.main .topbar .right-btns .right-menu {
-  display: none;
-}
-.main .topbar .right-btns .right-menu i {
-  font-size: 24px;
-}
 .main .title-container .title-text-main {
   margin-top: 20%;
 }
@@ -157,29 +69,8 @@ hr {
   .main {
     background-size: 100% auto;
   }
-  .main .topbar .right-btns .profile {
-    margin-right: 0;
-  }
-  .main .topbar .right-btns .profile img {
-    margin-right: 0;
-  }
-  .main .topbar .right-btns .profile span {
-    display: none;
-  }
 }
 @media only screen and (max-width: 992px) {
-  .main .topbar .menu {
-    display: none;
-  }
-  .main .topbar .right-btns .profile {
-    margin-right: 20px;
-  }
-  .main .topbar .right-btns .right-menu {
-    display: contents;
-  }
-  .main .topbar .right-btns .right-menu i {
-    color: #ffffff;
-  }
   .recent-full {
     margin-top: 100px;
   }
@@ -193,18 +84,6 @@ hr {
   }
 }
 @media only screen and (max-width: 576px) {
-  .main .topbar .left-btns .logo-text {
-    margin-right: 20px;
-  }
-  .main .topbar .left-btns .search-form {
-    margin-right: 20px;
-  }
-  .main .topbar .left-btns .search-form .action {
-    padding: 0;
-  }
-  .main .topbar .right-btns .profile {
-    display: none;
-  }
   .title-container .title-text-main h1 {
     font-size: 24px;
   }
@@ -233,12 +112,6 @@ h3 {
 a:link {
   color: #ffffff;
   text-decoration: none;
-}
-
-.container-fluid {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
 }
 
 /*# sourceMappingURL=main.css.map */
