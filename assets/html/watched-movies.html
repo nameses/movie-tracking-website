@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Watched Movies</title>
+    <!-- bootstrap -->
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+          integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" rel="stylesheet">
+    <!-- styles -->
+    <link href="../css/watched-movies.css" rel="stylesheet">
+    <link href="../css/common/topbar-styles.css" rel="stylesheet">
+    <link href="../css/common/footer-styles.css" rel="stylesheet">
+</head>
+<body>
+<div class="main">
+    <header class="topbar container-fluid ">
+        <div class="left-btns">
+            <span class="logo-text">
+                <a href="main.html">
+                    <h1>tracker</h1>
+                </a>
+            </span>
+            <fieldset class="search-form">
+                <input type="text">
+                <button class="action" type="submit">
+                    <i class="fas fa-search"></i>
+                </button>
+            </fieldset>
+        </div>
+        <div class="menu">
+            <a href="movie-page.html"><h3>ДОСЛІДЖУЙ</h3></a>
+            <a href="movies.html"><h3>ФІЛЬМИ</h3></a>
+            <a href="main.html"><h3>СТАТИСТИКА</h3></a>
+        </div>
+        <div class="right-menu">
+            <div class="right-btns" onclick="openMenu()">
+                <div class="profile">
+                    <img src="../img/profile-blank.jpg">
+                    <span>
+                        <h3>ПРОФІЛЬ</h3>
+                    </span>
+                </div>
+                <div class="right-icon">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+            <div class="dropdown-menu" id="dropdownMenu">
+                <a href="main.html">Головна</a>
+                <a href="">Профіль</a>
+                <a href="watched-movies.html">Переглянуті</a>
+                <a href="watched-movies.html">До перегляду</a>
+                <a href="watched-movies.html">Улюблені</a>
+                <a href="">Щоденник</a>
+                <a href="../../index.html">Вийти</a>
+            </div>
+        </div>
+    </header>
+    <div class="films-bar-full container">
+        <div class="films-bar">
+            <div class="top-bar">
+                <div class="topics">
+                    <h6 id="watched-topic">Переглянуті</h6>
+                    <h6 id="favourite-topic">Улюблені</h6>
+                    <h6 id="to-watch-topic">До перегляду</h6>
+                </div>
+                <script>
+                    var watchedTopic = document.getElementById("watched-topic");
+                    watchedTopic.style.color = "#FFFFFF";
+                    //later will be ability for changing topic-status and other filters from backend
+                </script>
+                <!--later logic of gallery will be changed-->
+                <div class="filters">
+                    <span class="filter">
+                        <h6>Рік</h6>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </span>
+                    <span class="filter">
+                        <h6>Жанр</h6>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </span>
+                    <span class="filter">
+                        <h6>Рейтинг</h6>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </span>
+                    <span class="filter filter-last">
+                        <h6>Популярність</h6>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </span>
+                    <span class="filter filter-last">
+                        <h6>Сортувати за РЕЙТИНГОМ</h6>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </span>
+                </div>
+                <div class="icon-settings"><i class="fa-solid fa-sliders"></i></div>
+            </div>
+            <hr/>
+            <div class="films-bar-containers">
+                <div class="films-bar-component">
+                    <div class="poster">
+                        <img src="../img/western-front.jpg">
+                    </div>
+                    <div class="poster">
+                        <img src="../img/the-shining.jpg">
+                    </div>
+                    <div class="poster">
+                        <img src="../img/taxidriver.jpg">
+                    </div>
+                    <div class="poster">
+                        <img src="../img/menu.jpg">
+                    </div>
+                    <div class="poster">
+                        <img src="../img/Bullet_Train.jpg">
+                    </div>
+                    <div class="poster">
+                        <img src="../img/joker.jpg">
+                    </div>
+                    <div class="poster poster-last">
+                        <img src="../img/everything-everywhere.jpg">
+                    </div>
+                    <div class="poster poster-last">
+                        <img src="../img/avatar-2.jpg">
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bar">
+                <hr/>
+                <div class="page-manage">
+                    <button class="btn-managing">
+                        <a href="">
+                            <h5>Попередня</h5>
+                        </a>
+                    </button>
+                    <div class="paginate-pages">
+                        <div class="paginate-page current-page">1</div>
+                        <div class="paginate-page">2</div>
+                        <div class="paginate-page">3</div>
+                        <div class="paginate-page unseen-page">...</div>
+                        <div class="paginate-page">7</div>
+                    </div>
+                    <button class="btn-managing">
+                        <a href="">
+                            <h5>Наступна</h5>
+                        </a>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="footer-full container">
+    <div class="footer">
+        <hr/>
+        <div class="footer-containers">
+            <div class="footer-component">
+                <div class="text">
+                    <h1>tracker</h1>
+                </div>
+                <div class="icons">
+                    <i class="fa-brands fa-telegram"></i>
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-discord"></i>
+                </div>
+            </div>
+            <div class="footer-component">
+                <div class="text">
+                    <a href=""><p>Благодійна підтримка проекту</p></a>
+                </div>
+                <div class="text">
+                    <p>Потрібна допомога? tracker.help@gmail.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom-component">
+                <div class="text">
+                    <p>© 2023 tracker. Film data by TMDB.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../js/dropdown-menu.js"></script>
+<script crossorigin="anonymous" src="https://kit.fontawesome.com/78efb955e0.js"></script>
+</body>
+</html>
