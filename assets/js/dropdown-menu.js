@@ -1,12 +1,9 @@
-function openMenu() {
-    var menu = document.getElementById("dropdownMenu");
-    var menuStyle = window.getComputedStyle(menu);
-    if (menuStyle.display === 'none') {
-        menu.style.display = 'block';
-    } else {
-        menu.style.display = 'none';
-    }
-}
+const menu = document.getElementById("dropdownMenu");
+document.querySelector(".right-btns")
+    .addEventListener("click", (event) => {
+        event.stopPropagation();
+        menu.classList.toggle("show");
+    });
 
 window.onclick = function (event) {
     if (!event.target.matches('.right-btns')) {

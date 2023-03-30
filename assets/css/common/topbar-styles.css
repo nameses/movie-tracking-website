@@ -1,3 +1,7 @@
+.show {
+  display: block !important;
+}
+
 .topbar {
   height: 80px;
   display: flex;
