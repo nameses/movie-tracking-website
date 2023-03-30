@@ -58,7 +58,7 @@ hr {
   max-width: 215px;
   max-height: 320px;
 }
-.main .recent-full .recent .recent-containers .recent-component .poster img {
+.main .recent-full .recent .recent-containers .recent-component .poster a img {
   width: 100%;
   height: 100%;
   border-radius: 10px;
