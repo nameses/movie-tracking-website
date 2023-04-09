@@ -66,6 +66,9 @@ hr {
   align-items: center;
   gap: 5px;
 }
+.main .films-bar-full .films-bar .top-bar .icon-settings {
+  display: none;
+}
 .main .films-bar-full .films-bar .films-bar-containers .films-bar-component {
   display: flex;
   justify-content: space-between;
@@ -135,6 +138,9 @@ hr {
   }
   .main .films-bar-full .films-bar .top-bar .filters {
     display: none;
+  }
+  .main .films-bar-full .films-bar .top-bar .icon-settings {
+    display: block;
   }
   .main .films-bar-full .films-bar .top-bar .icon-settings i {
     font-size: 20px;
