@@ -8,8 +8,10 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px;
+  z-index: 2;
 }
 .topbar .left-btns {
+  z-index: 2;
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
@@ -54,6 +56,7 @@
   font-weight: 200;
 }
 .topbar .menu {
+  z-index: 2;
   width: 50%;
   display: flex;
   justify-content: space-between;
@@ -69,6 +72,7 @@
 .topbar .right-menu {
   position: relative;
   display: inline-block;
+  z-index: 2;
 }
 .topbar .right-menu .right-btns {
   display: flex;
@@ -100,7 +104,7 @@
   right: 0;
   background-color: #1A1A1A;
   min-width: 160px;
-  z-index: 1;
+  z-index: 3;
 }
 .topbar .right-menu .dropdown-menu a {
   color: #999999;
